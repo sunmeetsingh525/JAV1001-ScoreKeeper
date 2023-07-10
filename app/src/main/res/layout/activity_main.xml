@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/blue"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,6 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- TextView for "Cambrian" -->
     <TextView
         android:id="@+id/cambrian"
         android:layout_width="124dp"
@@ -22,6 +24,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.224" />
 
+    <!-- TextView for "Seneca" -->
     <TextView
         android:id="@+id/seneca"
         android:layout_width="124dp"
@@ -37,6 +40,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.224" />
 
+    <!-- TextView for score 1 -->
     <TextView
         android:id="@+id/score1"
         android:layout_width="100dp"
@@ -54,6 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cambrian"
         app:layout_constraintVertical_bias="0.0" />
 
+    <!-- TextView for score 2 -->
     <TextView
         android:id="@+id/score2"
         android:layout_width="95dp"
@@ -71,6 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/seneca"
         app:layout_constraintVertical_bias="0.0" />
 
+    <!-- Spinner for result 1 -->
     <Spinner
         android:id="@+id/result1"
         android:layout_width="95dp"
@@ -85,6 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/score1"
         app:layout_constraintVertical_bias="0.584" />
 
+    <!-- Spinner for result 2 -->
     <Spinner
         android:id="@+id/result2"
         android:layout_width="95dp"
@@ -99,6 +106,7 @@
         app:layout_constraintTop_toBottomOf="@+id/score2"
         app:layout_constraintVertical_bias="0.585" />
 
+    <!-- EditText for the title -->
     <EditText
         android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
@@ -114,6 +122,7 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="78dp" />
 
+    <!-- Button to increase score 1 -->
     <Button
         android:id="@+id/btn1_increase"
         android:layout_width="110dp"
@@ -127,7 +136,7 @@
         app:layout_constraintTop_toBottomOf="@+id/score1"
         app:layout_constraintVertical_bias="0.061" />
 
-
+    <!-- Button to decrease score 1 -->
     <Button
         android:id="@+id/btn1_decrease"
         android:layout_width="110dp"
@@ -141,6 +150,7 @@
         app:layout_constraintTop_toBottomOf="@+id/score1"
         app:layout_constraintVertical_bias="1.0" />
 
+    <!-- Button to increase score 2 -->
     <Button
         android:id="@+id/btn2_increase"
         android:layout_width="110dp"
@@ -154,6 +164,7 @@
         app:layout_constraintTop_toBottomOf="@+id/score2"
         app:layout_constraintVertical_bias="0.058" />
 
+    <!-- Button to decrease score 2 -->
     <Button
         android:id="@+id/btn2_decrease"
         android:layout_width="110dp"
@@ -166,6 +177,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/score2"
         app:layout_constraintVertical_bias="1.0" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
