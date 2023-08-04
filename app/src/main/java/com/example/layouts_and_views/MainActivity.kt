@@ -72,9 +72,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-
         //update score with the help of spinner
-
             spinner1.onItemSelectedListener = object :
             AdapterView.OnItemSelectedListener {
                     override fun onItemSelected(
@@ -93,9 +91,7 @@ class MainActivity : AppCompatActivity() {
                     override fun onNothingSelected(parent: AdapterView<*>?) {
 
                     }
-
-
-                }
+            }
 
             spinner2.onItemSelectedListener = object :
 
@@ -104,8 +100,8 @@ class MainActivity : AppCompatActivity() {
                     parent: AdapterView<*>?,
                     view: View?,
                     position: Int,
-                    id: Long
-                ) {
+                    id: Long )
+                {
                     var position_val = score[position]
                     var val_to_int = position_val.toInt()
                     var final2 = val_to_int+num2
@@ -116,12 +112,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onNothingSelected(parent: AdapterView<*>?) {
 
                 }
-
-
             }
-
-
-
     }
 }
 
