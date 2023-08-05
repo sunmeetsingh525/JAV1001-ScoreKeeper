@@ -13,15 +13,4 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
 
     </style>
-
-    <!-- Night mode theme -->
-    <style name="AppTheme.Night" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <item name="colorPrimary">@color/primary_color_night</item>
-        <item name="colorPrimaryVariant">@color/primary_color_day</item>
-        <item name="colorOnPrimary">@color/text_color_primary_night</item>
-        <item name="colorSecondary">@color/secondary_color_night</item>
-        <item name="colorSecondaryVariant">@color/secondary_color_day</item>
-        <item name="colorOnSecondary">@color/text_color_primary_night</item>
-
-    </style>
 </resources>
