@@ -1,6 +1,9 @@
 package com.example.layouts_and_views
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -114,5 +117,25 @@ class MainActivity : AppCompatActivity() {
                 }
             }
     }
+                override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+                    menuInflater.inflate(R.menu.menu_main, menu)
+                    return true
+                }
+
+                override fun onOptionsItemSelected(item: MenuItem): Boolean {
+                    when (item.itemId) {
+                        R.id.menu_about -> {
+                            val developerInfo = "Developer: Ruby Chaulagain\nCourse Code: JAV-1001-50805"
+                            Toast.makeText(this, developerInfo, Toast.LENGTH_LONG).show()
+                            return true
+                        }
+                        R.id.menu_settings -> {
+                            val intent = Intent(this, SettingsActivity::class.java)
+                            startActivity(intent)
+                            return true
+                        }
+                        else -> return super.onOptionsItemSelected(item)
+                    }
+                }
 }
 
