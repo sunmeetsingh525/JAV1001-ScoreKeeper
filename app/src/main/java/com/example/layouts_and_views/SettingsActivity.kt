@@ -11,19 +11,13 @@ class SettingsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
 
-        val switchSaveScores = findViewById<Switch>(R.id.switch_save_scores)
-
-        // Retrieve the shared preferences
+        val switchSaveScores = findViewById<Switch>(R.id.switchSaveScores)
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-        val editor = sharedPreferences.edit()
+        val editor: SharedPreferences.Editor = sharedPreferences.edit()
 
-        // Get the current value of the switch
-        val currentSetting = sharedPreferences.getBoolean("save_scores", true)
-        switchSaveScores.isChecked = currentSetting
+        switchSaveScores.isChecked = sharedPreferences.getBoolean("save_scores", true)
 
-        // Set the listener for the switch
         switchSaveScores.setOnCheckedChangeListener { _, isChecked ->
-            // Save the user's choice in shared preferences
             editor.putBoolean("save_scores", isChecked)
             editor.apply()
         }
